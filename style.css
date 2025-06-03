@@ -1,86 +1,126 @@
-/* Βασικές ρυθμίσεις */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
+.scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-/* Πλοήγηση */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #004080;
-  padding: 1rem 2rem;
-}
+  .text-area {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #888888;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  }
 
-.navbar .logo {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
+  .scroll-track {
+    display: inline-flex;
+    animation: scroll-left 35s linear infinite;
+    align-items: center;
+  }
 
-.navbar .nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
+  .scroll-container.reverse .scroll-track {
+    animation: scroll-right 30s linear infinite;
+  }
 
-.navbar .nav-links li a:hover {
-  text-decoration: underline;
-}
+  .scroll-container:hover .scroll-track {
+    animation-play-state: paused;
+  }
 
-/* Hero Section */
-.hero {
-  background: url('images/hero.jpg') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 2rem;
-}
+  .scroll-item {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: #888888;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+  }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+  .scroll-item img {
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
 
-.hero p {
-  font-size: 1.2rem;
-}
+  .scroll-item::after {
+    content: "•";
+    color: #888888;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    opacity: 0.5;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  }
 
-/* Κύριο περιεχόμενο */
-main {
-  padding: 2rem;
-}
+  .scroll-item:last-child::after {
+    content: "";
+  }
 
-section {
-  margin-bottom: 2rem;
-}
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 
-.project-card {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
+  @media (max-width: 768px) {
+    .text-area {
+      font-size: 1.3rem;
+    }
 
-/* Υποσέλιδο */
-footer {
-  background-color: #004080;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
+    .scroll-item {
+      font-size: 1.1rem;
+      padding: 0 1rem;
+    }
+
+    .scroll-item img {
+      height: 20px;
+    }
+
+    .scroll-item::after {
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .text-area {
+      font-size: 1.1rem;
+    }
+
+    .scroll-item {
+      font-size: 1rem;
+      padding: 0 0.8rem;
+    }
+
+    .scroll-item img {
+      height: 18px;
+    }
+
+    .scroll-item::after {
+      margin-left: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
