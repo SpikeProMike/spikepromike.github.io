@@ -1,2 +1,1 @@
-// Add any interactivity you want
-console.log("Portfolio loaded!");
+console.log("Site loaded successfully!");

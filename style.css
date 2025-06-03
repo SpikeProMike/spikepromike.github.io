@@ -1,39 +1,68 @@
+/* Base styling */
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f9;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
   color: #333;
 }
 
-header, section, footer {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+h1, h2, h3 {
+  color: #222;
 }
 
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
 header {
-  background-color: #333;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 5rem 1rem;
 }
 
-h1, h2 {
-  margin-top: 0;
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
-.project {
-  background: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Sections */
+section {
+  padding: 3rem 0;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
+a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
+  background-color: #222;
+  color: #aaa;
   text-align: center;
-  font-size: 0.9em;
-  color: #777;
+  padding: 2rem 1rem;
 }
