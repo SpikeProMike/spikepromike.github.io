@@ -194,3 +194,11 @@ document.querySelectorAll('.scroll-container').forEach(container => {
     });
   }
 })();
+
+  function openModel() {
+    window.open(
+      "https://spikepromike.github.io/site/3d-viewer.html",
+      "popup",
+      "width=800,height=600"
+    );
+  }

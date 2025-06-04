@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 :root {
   --bg-main: #111;
   --bg-nav: #23272f;
@@ -7,11 +10,11 @@
 }
 
 body {
+  zoom: 200%; /* or 200% */
   background: var(--bg-main);
   color: var(--btn-color);
   margin: 0;
   padding: 0;
-  min-height: 300vh;
   background:
     linear-gradient(120deg, #101624 0%, #0a1a22 100%) fixed,
     repeating-radial-gradient(circle at 60% calc(20% + var(--bg-parallax, 0px)), #0ff2 0 60px, transparent 100px 200px) fixed,
@@ -28,6 +31,8 @@ body {
     0 calc(var(--bg-parallax2, 0px)),
     0 calc(var(--bg-parallax3, 0px));
   transition: background-position 0.2s;
+      font-family: "Nunito", sans-serif;
+
 }
 
 .nav-wrapper,
@@ -361,4 +366,97 @@ body {
 /* Remove the hero-links/buttons */
 .hero-links {
   display: none !important;
+}
+
+
+/* ============================ */
+
+.titlesstyling {
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.08em;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 6px #0ff1;
+  opacity: 0.93;
+  background: none;
+  border: none;
+}
+.education {
+  color : rgb(190, 190, 190);
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 7px;
+  text-align: center;
+  padding-left: 10px;
+}
+.educationa{
+  color : rgb(196, 196, 196);
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 10px;
+    text-align: center;
+
+  font-weight: 600;
+}
+.timeperiod {
+  color : gray;
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 5px;
+    text-align: center;
+
+}
+.contact {
+  color : gray;
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 10px;
+}
+.row {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+model-viewer {
+  align-items: center;
+  width: 150px;
+  height: 200px;
+  background: #2c2c2c00;
+  border: 0px solid #3f3f3f00;
+  display: flex;
+  position: relative;
+  padding: 6px 12px;
+}
+
+.view-3d-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  padding: 6px 12px 6px;
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 10px;
+  color: #e0f7fa;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: #a1afda81;
+  border: none;
+}
+
+.view-3d-button:hover {
+  background-color: #1d306be1;
+  transform: scale(1.02);
 }

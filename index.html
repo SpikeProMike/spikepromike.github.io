@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/721bd8c24b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+   <!-- Starter Portfolio Page -->
   <section class="hero-section">
     <div class="hero-content">
       <div class="hero-meta">
@@ -27,6 +31,38 @@
     <div class="hero-art"></div>
   </section>
 
+  <!-- Personal Card -->
+  <div class="row">
+    <div class="column">
+      <img src="office-bg.png" style="width:100%">
+      <p class="titlesstyling">Contact Me</p>
+      <p class="contact">mikelcou@gmail.com</p>
+    </div>
+    <div class="column">
+      <p class="titlesstyling">Education</p>
+      <p class="educationa">University of Western Macedonia</p>
+      <p class="education">Department of Product and Systems Design Engineering</p>
+      <p class="timeperiod">2021-Present</p>
+      <p class="educationa">Seminars and Conferences</p>
+      <p class="education">• 7th Smart Education Conference “Artificial Intelligence (AI)</p>
+      <p class="education">• "Fundamentals of Human Resource Management"</p> 
+      <p class="education">• “Basic Skills of Successful Managers”</p>
+      <p class="timeperiod">2023-Present</p>
+    </div>
+    <div class="column">
+      <p class="titlesstyling">Experience</p>
+      <p class="educationa">Game Assets Designing</p>
+      <p class="education">Various Community Projects</p>
+      <p class="timeperiod">2017-Present</p>
+      <p class="educationa">Freelance</p>
+      <p class="education">Graphic Designer</p>
+      <p class="timeperiod">2020-2023</p>
+      <p class="educationa">Junior Game Designer</p>
+      <p class="education">On Lua Framework</p>
+      <p class="timeperiod">2023-Present</p>
+    </div>
+  </div>
+  <!-- What I work with -->
   <div class="scroll-wrapper">
     <div class="text-area">Software I work with</div>
 
@@ -72,6 +108,128 @@
       </div>
     </div>
   </div>
+
+  <!-- Game Ready Assets -->
+  <div class="row">
+      <p class="titlesstyling">Game Ready Assets</p>
+
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel()">View 3D</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel()">View 3D</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel()">View 3D</button>
+      </div>
+  </div>
+
+  <!-- Game Ready Assets -->
+  <div class="row">
+      <p class="titlesstyling">Game Ready Assets</p>
+
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel()">View 3D</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel()">View 3D</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel()">View 3D</button>
+      </div>
+  </div>
+
+  <!-- Theme Toggle-->
   <div class="theme-toggle-wrapper">
     <button class="theme-toggle-btn active" data-theme="dark" title="Dark mode">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 0112.79 3a1 1 0 00-1.13 1.32A7 7 0 1019.68 13.9a1 1 0 001.32-1.11z"/></svg>
@@ -81,28 +239,5 @@
     </button>
   </div>
   <script src="script.js"></script>
-  <script>
-    // Highlight nav button on hover/click
-    document.querySelectorAll('.nav-capsule .nav-btn').forEach(btn => {
-      btn.addEventListener('mouseenter', function() {
-        document.querySelectorAll('.nav-capsule .nav-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-      });
-      btn.addEventListener('mouseleave', function() {
-        this.classList.remove('active');
-        // Optionally, set the first button as active by default
-        document.querySelector('.nav-capsule .nav-btn').classList.add('active');
-      });
-      btn.addEventListener('focus', function() {
-        document.querySelectorAll('.nav-capsule .nav-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-      });
-      btn.addEventListener('blur', function() {
-        this.classList.remove('active');
-        document.querySelector('.nav-capsule .nav-btn').classList.add('active');
-      });
-    });
-  </script>
-  <div style="height: 120vh;"></div>
 </body>
 </html>
