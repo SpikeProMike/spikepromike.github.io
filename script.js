@@ -195,10 +195,42 @@ document.querySelectorAll('.scroll-container').forEach(container => {
   }
 })();
 
-  function openModel() {
-    window.open(
-      "https://spikepromike.github.io/site/3d-viewer.html",
-      "popup",
-      "width=800,height=600"
-    );
+  function openModel(value) {
+    if (value == "console") {
+      window.open(
+        "https://spikepromike.github.io/spikepromike.github.io/model-viewers/console.html",
+        "popup",
+        "width=800,height=600"
+      );
+    } else if (value == "desk") {
+      window.open(
+        "https://spikepromike.github.io/spikepromike.github.io/model-viewers/desk.html",
+        "popup",
+        "width=800,height=600"
+      );
+    } else if (value == "speaker") {
+      window.open(
+        "https://spikepromike.github.io/spikepromike.github.io/model-viewers/speaker.html",
+        "popup",
+        "width=800,height=600"
+      )
+    } else if (value == "flyingcar") {
+      window.open(
+        "https://spikepromike.github.io/spikepromike.github.io/model-viewers/flyingcar.html",
+        "popup",
+        "width=800,height=600"
+      );
+    } else if (value == "armchair") {
+      window.open(
+        "https://spikepromike.github.io/spikepromike.github.io/model-viewers/armchair.html",
+        "popup",
+        "width=800,height=600"
+      );
+    } else if (value == "busstop") {
+      window.open(
+        "https://spikepromike.github.io/spikepromike.github.io/model-viewers/busstop.html",
+        "popup",
+        "width=800,height=600"
+      );
+    }
   }
