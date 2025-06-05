@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+html {
+  font-size: 2rem; /* 200% scaling for rem units */
+}
 
 :root {
   --bg-main: #111;
@@ -10,16 +13,16 @@
 }
 
 body {
-  zoom: 200%; /* or 200% */
+  /* zoom: 200%;  removed */
   background: var(--bg-main);
   color: var(--btn-color);
   margin: 0;
   padding: 0;
   background:
     linear-gradient(120deg, #101624 0%, #0a1a22 100%) fixed,
-    repeating-radial-gradient(circle at 60% calc(20% + var(--bg-parallax, 0px)), #0ff2 0 60px, transparent 100px 200px) fixed,
-    repeating-linear-gradient(120deg, #0ff1 0 2px, transparent 2px 40px) fixed,
-    repeating-linear-gradient(60deg, #0ff1 0 1px, transparent 1px 30px) fixed;
+    repeating-radial-gradient(circle at 60% calc(20% + var(--bg-parallax, 0px)), #0ff2 0 3.75rem, transparent 6.25rem 12.5rem) fixed,
+    repeating-linear-gradient(120deg, #0ff1 0 0.125rem, transparent 0.125rem 2.5rem) fixed,
+    repeating-linear-gradient(60deg, #0ff1 0 0.0625rem, transparent 0.0625rem 1.875rem) fixed;
   background-size:
     cover,
     200% 200%,
@@ -31,39 +34,38 @@ body {
     0 calc(var(--bg-parallax2, 0px)),
     0 calc(var(--bg-parallax3, 0px));
   transition: background-position 0.2s;
-      font-family: "Nunito", sans-serif;
-
+  font-family: "Nunito", sans-serif;
 }
 
 .nav-wrapper,
 .scroll-wrapper,
 .theme-toggle-wrapper {
   background: rgba(18, 22, 34, 0.82);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 #0ff2 inset;
-  backdrop-filter: blur(6px) saturate(1.2);
-  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 2rem 0 rgba(0,0,0,0.45), 0 0.09375rem 0.5rem 0 #0ff2 inset;
+  backdrop-filter: blur(0.375rem) saturate(1.2);
+  border-radius: 0.75rem;
 }
 
 .nav-wrapper {
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 18.75rem;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  height: 3.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 2.1875rem;
 }
 
 .nav-capsule {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2rem;
-  padding: 0.25rem 0.5rem;
-  margin: 1rem auto 1rem auto;
-  max-width: 320px;
-  max-height: 3.5rem;
+  border-radius: 1rem;
+  padding: 0.125rem 0.25rem;
+  margin: 0.5rem auto 0.5rem auto;
+  max-width: 20rem;
+  max-height: 2.1875rem;
   gap: 0;
   overflow: hidden;
 }
@@ -73,8 +75,8 @@ body {
   color: #fff;
   border: none;
   border-radius: 0;
-  padding: 0.25rem 0.9rem;
-  font-size: 0.98rem;
+  padding: 0.125rem 0.45rem;
+  font-size: 0.49rem;
   font-weight: 600;
   font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
   letter-spacing: 0.08em;
@@ -87,13 +89,13 @@ body {
 }
 
 .nav-btn:first-child {
-  border-top-left-radius: 1.2rem;
-  border-bottom-left-radius: 1.2rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
 }
 
 .nav-btn:last-child {
-  border-top-right-radius: 1.2rem;
-  border-bottom-right-radius: 1.2rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -114,27 +116,27 @@ body {
 .scroll-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 500px;
+  gap: 0.25rem;
+  max-width: 31.25rem;
   margin: auto;
-  font-size: 0.85rem;
-  padding: 1rem 0 1rem 0;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.425rem;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   background: rgba(18, 22, 34, 0.82);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 #0ff2 inset;
-  backdrop-filter: blur(6px) saturate(1.2);
-  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 2rem 0 rgba(0,0,0,0.45), 0 0.09375rem 0.5rem 0 #0ff2 inset;
+  backdrop-filter: blur(0.375rem) saturate(1.2);
+  border-radius: 0.75rem;
 }
 
 .text-area {
   display: inline-block;
-  margin: 0.1rem auto 0.05rem auto;
+  margin: 0.05rem auto 0.025rem auto;
   padding: 0;
   background: none;
   border: none;
   border-radius: 0;
-  font-size: 0.85rem;
+  font-size: 0.425rem;
   font-weight: 700;
   color: #fff;
   font-family: 'Segoe UI', 'Arial', sans-serif;
@@ -151,7 +153,7 @@ body {
 }
 
 .scroll-container {
-  margin-bottom: 0.05rem;
+  margin-bottom: 0.025rem;
   margin-left: auto;
   position: relative;
   width: 190%;
@@ -160,7 +162,8 @@ body {
   white-space: nowrap;
   cursor: default;
   transform: scale(0.5);
-  transform-origin: top center;
+  transform-origin: top center; /* Adjusted to keep the scaling centered */
+  /* Remove transform: scale(0.5); and transform-origin to avoid double scaling */
 }
 
 .scroll-track {
@@ -176,15 +179,15 @@ body {
 .scroll-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0 1.5rem;
-  font-size: 1.2rem;
+  gap: 0.25rem;
+  padding: 0 0.75rem;
+  font-size: 0.6rem;
   transition: text-shadow 0.3s ease;
 }
 
 .scroll-item img {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   user-select: none;
   pointer-events: none;
 }
@@ -205,13 +208,13 @@ body {
 .scroll-item-separator {
   display: inline-block;
   width: 0.7em;
-  height: 0.18em;
+  height: 0.1125em;
   background: #8f94fb;
   border-radius: 1em;
-  margin: 0 0.2em;
+  margin: 0 0.125em;
   vertical-align: middle;
   opacity: 0.7;
-  transform: translateY(-0.1em);
+  transform: translateY(-0.0625em);
 }
 
 .theme-toggle-wrapper {
@@ -220,13 +223,13 @@ body {
   bottom: 2.5vw;
   display: flex;
   align-items: center;
-  height: 28px;
+  height: 1.75rem;
   margin: 0;
   background: var(--bg-nav);
-  border-radius: 14px;
-  box-shadow: 0 2px 8px var(--btn-shadow), 0 1px 1px #23272f inset;
-  padding: 0 3px;
-  min-width: 40px;
+  border-radius: 0.875rem;
+  box-shadow: 0 0.125rem 0.5rem var(--btn-shadow), 0 0.0625rem 0.0625rem #23272f inset;
+  padding: 0 0.1875rem;
+  min-width: 2.5rem;
   z-index: 1000;
   gap: 0;
 }
@@ -238,8 +241,8 @@ body {
   box-shadow: none;
   padding: 0;
   margin: 0;
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height: 1.375rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -261,7 +264,7 @@ body {
 .theme-toggle-btn.active {
   color: var(--bg-main);
   background: var(--btn-color);
-  box-shadow: 0 1px 4px var(--btn-shadow), 0 1px 1px #fff inset;
+  box-shadow: 0 0.0625rem 0.25rem var(--btn-shadow), 0 0.0625rem 0.0625rem #fff inset;
 }
 
 .theme-toggle-btn:not(.active):hover {
@@ -272,13 +275,13 @@ body {
 .hero-section {
   display: flex;
   align-items: flex-end;
-  min-height: 400px;
-  padding: 3.5rem 2vw 2.5rem 2vw;
+  min-height: 25rem;
+  padding: 1.75rem 2vw 1.25rem 2vw;
   position: relative;
   background:
     linear-gradient(120deg, #4f80f121 60%, #4f80f121 100%) fixed,
     url('office-bg.png') center center / cover no-repeat;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   overflow: hidden;
 }
 
@@ -286,7 +289,7 @@ body {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 55%;
+  height: 27.5%;
   pointer-events: none;
   z-index: 1;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #101624 90%);
@@ -297,14 +300,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  max-width: 520px;
+  max-width: 32.5rem;
   padding-right: 3vw;
   margin-left: auto;
   text-align: right;
 }
 
 .hero-meta {
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.6875rem;
 }
 
 .hero-title {
@@ -312,12 +315,12 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;700&display=swap');
 
   font-family: 'Edu NSW ACT Foundation', cursive, 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.375rem;
   font-weight: 400;
   color: #e0f7fa;
   letter-spacing: 0.06em;
-  margin-bottom: 0.10em;
-  text-shadow: 0 2px 8px #0ff2;
+  margin-bottom: 0.0625em;
+  text-shadow: 0 0.125rem 0.5rem #0ff2;
   text-transform: uppercase;
   opacity: 0.97;
   background: none;
@@ -326,25 +329,25 @@ body {
 
 .hero-date {
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 1.05rem;
+  font-size: 0.65625rem;
   color: #7befff;
   opacity: 0.8;
   font-weight: 400;
   letter-spacing: 0.13em;
-  text-shadow: 0 1px 4px #0ff1;
-  margin-bottom: 0.13em;
+  text-shadow: 0 0.0625rem 0.25rem #0ff1;
+  margin-bottom: 0.08125em;
   background: none;
   border: none;
 }
 
 .hero-name {
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 0.78125rem;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 0.08em;
+  margin-bottom: 0.05em;
   letter-spacing: 0.04em;
-  text-shadow: 0 1px 6px #0ff1;
+  text-shadow: 0 0.0625rem 0.375rem #0ff1;
   opacity: 0.93;
   background: none;
   border: none;
@@ -352,12 +355,12 @@ body {
 
 .hero-desc {
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.625rem;
   color: #b7dfff;
   font-weight: 400;
-  margin-bottom: 0.22em;
+  margin-bottom: 0.1375em;
   letter-spacing: 0.04em;
-  text-shadow: 0 1px 3px #0ff1;
+  text-shadow: 0 0.0625rem 0.1875rem #0ff1;
   opacity: 0.82;
   background: none;
   border: none;
@@ -373,12 +376,12 @@ body {
 
 .titlesstyling {
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 0.78125rem;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 0.08em;
+  margin-bottom: 0.05em;
   letter-spacing: 0.04em;
-  text-shadow: 0 1px 6px #0ff1;
+  text-shadow: 0 0.0625rem 0.375rem #0ff1;
   opacity: 0.93;
   background: none;
   border: none;
@@ -386,33 +389,31 @@ body {
 .education {
   color : rgb(190, 190, 190);
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 7px;
+  font-size: 0.4375rem;
   text-align: center;
-  padding-left: 10px;
+  padding-left: 0.625rem;
 }
 .educationa{
   color : rgb(196, 196, 196);
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 10px;
-    text-align: center;
-
+  font-size: 0.625rem;
+  text-align: center;
   font-weight: 600;
 }
 .timeperiod {
   color : gray;
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 5px;
-    text-align: center;
-
+  font-size: 0.3125rem;
+  text-align: center;
 }
 .contact {
   color : gray;
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .row {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  max-width: 31.25rem;
   margin: auto;
   text-align: center;
 }
@@ -431,29 +432,29 @@ body {
 
 model-viewer {
   align-items: center;
-  width: 150px;
-  max-width 100%;
-  max-height 100%;
-  height: 200px;
+  width: 9.375rem;
+  max-width: 100%;
+  max-height: 100%;
+  height: 12.5rem;
   background: #2c2c2c00;
   border: 0px solid #3f3f3f00;
   display: flex;
   position: relative;
-  padding: 6px 12px;
+  padding: 0.375rem 0.75rem;
 }
 
 .view-3d-button {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
-  padding: 6px 12px 6px;
+  border-radius: 0.125rem;
+  padding: 0.375rem 0.75rem 0.375rem;
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #e0f7fa;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0.625rem);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
   background-color: #a1afda81;
   border: none;
 }
@@ -468,7 +469,7 @@ model-viewer {
   .row {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
   .column {
     width: 100% !important;
@@ -477,7 +478,7 @@ model-viewer {
     margin: 0 auto;
   }
   model-viewer {
-    height: 220px !important;
+    height: 13.75rem !important;
     min-width: 0 !important;
   }
 }
