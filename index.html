@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://api.fontshare.com/v2/css?f[]=telma@900,1&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio</title>
@@ -34,11 +35,6 @@
   <!-- Personal Card -->
   <div class="row">
     <div class="column">
-      <img src="office-bg.png" style="width:100%">
-      <p class="titlesstyling">Contact Me</p>
-      <p class="contact">mikelcou@gmail.com</p>
-    </div>
-    <div class="column">
       <p class="titlesstyling">Education</p>
       <p class="educationa">University of Western Macedonia</p>
       <p class="education">Department of Product and Systems Design Engineering</p>
@@ -60,6 +56,11 @@
       <p class="educationa">Junior Game Designer</p>
       <p class="education">On Lua Framework</p>
       <p class="timeperiod">2023-Present</p>
+    </div>
+    <div class="column">
+      <img src="office-bg.png" class="profile-image">
+      <p class="titlesstyling">Contact Me</p>
+      <p class="contact">mikelcou@gmail.com</p>
     </div>
   </div>
   <!-- What I work with -->
@@ -109,12 +110,12 @@
     </div>
   </div>
 
-  <!-- Game Ready Assets -->
+  <!-- Product Design Assets -->
   <div class="row">
-      <p class="titlesstyling">Game Ready Assets</p>
+      <p class="titlesstyling">Product Design Assets</p>
 
       <div class="column">
-        <p class="educationa">Education</p>
+        <p class="educationa">Gaming Console</p>
 
         <model-viewer 
           src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/Console.glb"
@@ -133,7 +134,7 @@
         <button class="view-3d-button" onclick="openModel('console')">Closer Look</button>
       </div>
       <div class="column">
-        <p class="educationa">Education</p>
+        <p class="educationa">Study Cafe Desk</p>
 
         <model-viewer 
           src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/Desk.glb"
@@ -151,7 +152,7 @@
         <button class="view-3d-button" onclick="openModel('desk')">Closer Look</button>
       </div>
       <div class="column">
-        <p class="educationa">Education</p>
+        <p class="educationa">Speaker/Projector</p>
 
         <model-viewer 
           src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/Speaker.glb"
@@ -168,6 +169,63 @@
           width="100%" height="300">
         </model-viewer>
         <button class="view-3d-button" onclick="openModel('speaker')">Closer Look</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Hover Car</p>
+
+        <model-viewer 
+          src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/FlyingCar.glb"
+          ios-src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/FlyingCar.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="auto auto 20m"
+          field-of-view="70deg"
+          min-camera-orbit="auto auto 0.5m"
+          max-camera-orbit="auto auto 20m"
+          width="100%" height="300">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel('flyingcar')">Closer Look</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Armchair</p>
+
+        <model-viewer 
+          src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/Armchair.glb"
+          ios-src="https://media.githubusercontent.com/media/SpikeProMike/spikepromike.github.io/main/models/Armchair.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 30m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 0.5m"
+          max-camera-orbit="auto auto 30m"
+          width="100%" height="300">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel('armchair')">Closer Look</button>
+      </div>
+      <div class="column">
+        <p class="educationa">Education</p>
+
+        <model-viewer 
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+          alt="A 3D model"
+          auto-rotate 
+          camera-controls 
+          ar 
+          shadow-intensity="1"
+          camera-orbit="0deg 75deg 1.5m"
+          field-of-view="25deg"
+          min-camera-orbit="auto auto 1.2m"
+          max-camera-orbit="auto auto 3m"
+          width="100%" height="300">
+        </model-viewer>
+        <button class="view-3d-button" onclick="openModel('astronaut')">Closer Look</button>
       </div>
   </div>
 
@@ -233,7 +291,6 @@
         <button class="view-3d-button" onclick="openModel('astronaut')">Closer Look</button>
       </div>
   </div>
-
   <!-- Theme Toggle-->
   <div class="theme-toggle-wrapper">
     <button class="theme-toggle-btn active" data-theme="dark" title="Dark mode">
