@@ -216,9 +216,61 @@ document.querySelectorAll('.scroll-container').forEach(container => {
       window.open(
         "https://spikepromike.github.io/model-viewers/armchair.html",
       );
-    } else if (value == "busstop") {
+    } else if (value == "BusStation") {
       window.open(
-        "https://spikepromike.github.io/model-viewers/busstop.html",
+        "https://spikepromike.github.io/model-viewers/busstation.html",
       );
     }
   }
+// Fullscreen image viewer for last row's gallery images only
+(function() {
+  document.addEventListener('click', function(e) {
+    const img = e.target.closest('.gallery-fullscreen');
+    if (!img) return;
+
+    let overlay = document.getElementById('fullscreen-img-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'fullscreen-img-overlay';
+      overlay.style.position = 'fixed';
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = '100vw';
+      overlay.style.height = '100vh';
+      overlay.style.background = 'rgba(0,0,0,0.92)';
+      overlay.style.display = 'flex';
+      overlay.style.flexDirection = 'column';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.zIndex = 9999;
+      overlay.style.cursor = 'zoom-out';
+      overlay.innerHTML = `
+        <img id="fullscreen-img" style="max-width:90vw;max-height:80vh;border-radius:1rem;box-shadow:0 0 2rem #000;" />
+        <div id="fullscreen-caption" style="color:#fff;font-size:1.2rem;margin-top:1rem;text-align:center;"></div>
+        <button id="close-fullscreen-img" style="
+          position:absolute;top:2rem;right:2rem;
+          background:#fff;border:none;border-radius:50%;
+          width:2.5rem;height:2.5rem;font-size:2rem;cursor:pointer;
+          box-shadow:0 2px 8px #0008;z-index:10001;
+        " title="Close">&times;</button>
+      `;
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener('click', function(ev) {
+        if (ev.target === overlay || ev.target.id === 'close-fullscreen-img') {
+          overlay.style.display = 'none';
+        }
+      });
+      document.addEventListener('keydown', function(ev) {
+        if (ev.key === 'Escape' && overlay.style.display !== 'none') {
+          overlay.style.display = 'none';
+        }
+      });
+    }
+    overlay.querySelector('#fullscreen-img').src = img.src;
+    // Get caption from sibling .gallery-caption
+    const caption = img.parentElement.querySelector('.gallery-caption');
+    overlay.querySelector('#fullscreen-caption').textContent = caption ? caption.textContent : '';
+    overlay.style.display = 'flex';
+  });
+})();
