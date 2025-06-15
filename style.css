@@ -425,9 +425,9 @@ body {
 }
 
 .profile-image {
-  width: 95%;
+  width: 60%;
   height: auto;
-  padding: 0.5rem 10rem 0rem 0rem;
+  padding: 0.5rem 0rem 0rem 0rem;
 }
 
 .gallery-image {
